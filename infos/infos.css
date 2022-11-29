@@ -1,0 +1,11 @@
+.infos {
+  display: flex;
+  gap: 9rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .infos {
+    flex-direction: column;
+  }
+}

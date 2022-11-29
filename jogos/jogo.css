@@ -1,0 +1,38 @@
+.jogo {
+  animation: aparecer 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.jogo_titulo {
+  color: var(--rosa);
+}
+
+.jogo_rating {
+  color: var(--rosa);
+}
+
+.jogo_tag {
+  color: var(--bege);
+}
+
+.jogo_mensagem {
+  text-decoration: none;
+  color: var(--azul);
+  transition: 0.2s;
+}
+
+.jogo_mensagem:hover {
+  color: var(--rosa);
+}

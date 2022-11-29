@@ -1,0 +1,43 @@
+.publisher {
+  animation: aparecer 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.publisher_titulo {
+  color: var(--rosa);
+}
+
+.publisher_logo {
+  max-height: 175px;
+}
+
+.publisher_jogos-titulo {
+  color: var(--roxo);
+}
+
+.publisher_jogo {
+  color: var(--rosa);
+  list-style: none;
+}
+
+.publisher_mensagem {
+  color: var(--azul);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.publisher_mensagem:hover {
+  color: var(--roxo);
+}

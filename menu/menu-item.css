@@ -1,0 +1,15 @@
+.menu_item {
+    list-style: none;
+}
+
+.menu_item-link {
+    color: var(--rosa);
+    text-decoration: none;
+    transition: .2s;
+}
+
+.menu_item-link:hover {
+    color: var(--roxo);
+    font-weight: bold;
+    text-decoration: underline;
+}

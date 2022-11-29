@@ -1,0 +1,11 @@
+.item-detalhado_link {
+  color: var(--azul);
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.item-detalhado_link:hover {
+  color: var(--rosa);
+  text-decoration: underline;
+}

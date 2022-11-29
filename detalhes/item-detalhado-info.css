@@ -1,0 +1,15 @@
+.item-detalhado_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 80%;
+  justify-content: center;
+  padding: 2rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 1023px) {
+  .item-detalhado_info {
+    width: 100%;
+  }
+}

@@ -1,0 +1,31 @@
+.item-detalhado_container {
+  align-items: center;
+  animation: surge 0.3s ease-in-out;
+  background: var(--roxo);
+  border-radius: 20px;
+  display: flex;
+  height: 75vh;
+  justify-content: space-around;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+@keyframes surge {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .item-detalhado_container {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    margin: 1rem;
+  }
+}

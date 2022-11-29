@@ -1,0 +1,13 @@
+header {
+  align-items: center;
+  background-color: var(--azul);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,15 @@
+.jogos_filtros {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.genero {
+  background-color: var(--azul);
+  border: none;
+  box-shadow: 0 0 0 0;
+  color: var(--bege);
+}
+
+.jogos_filtros-genero {
+  color: var(--bege);
+}

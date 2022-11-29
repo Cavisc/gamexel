@@ -1,0 +1,12 @@
+.stores_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1023px) {
+  .stores_container {
+    flex-direction: column;
+  }
+}

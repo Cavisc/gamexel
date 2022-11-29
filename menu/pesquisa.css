@@ -1,0 +1,38 @@
+.campo_pesquisa {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.pesquisa {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid var(--rosa);
+  color: var(--roxo);
+  margin-left: 15px;
+  padding: 0.5rem;
+  transition: 0.1s;
+}
+
+.pesquisa:focus {
+  border: 1px solid var(--roxo);
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.pesquisa::placeholder {
+  color: var(--bege);
+}
+
+.campo_pesquisa > i {
+  color: var(--bege);
+  cursor: pointer;
+  left: -30px;
+  margin-left: 0.3rem;
+  position: relative;
+  transition: 0.2s;
+}
+
+.campo_pesquisa > i:hover {
+  color: var(--roxo);
+}

@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --preto: #010400;
+  --bege: #d4e79e;
+  --roxo: #5c2751;
+  --azul: #62bbc1;
+  --rosa: #ec058e;
+  --press-start: "Press Start 2P", cursive;
+  --poppins: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--preto);
+  font-family: var(--poppins);
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--azul); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--rosa); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+h1 {
+  font-family: var(--press-start);
+  color: var(--roxo);
+}
+
+section {
+  padding: 2rem;
+}
+
+.nome-site {
+  color: var(--roxo);
+  font-family: var(--press-start);
+}
