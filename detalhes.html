@@ -84,7 +84,6 @@
     <script>
       feather.replace();
     </script>
-    <script src="./script.js"></script>
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       let categoria = urlParams.get("category");
@@ -184,6 +183,26 @@
             );
             containerItem.innerHTML = str;
           });
+      }
+      // dinâmica de menu mobile
+      if (window.screen.width < 768) {
+        btnAbreMenu.addEventListener("click", (e) => {
+          btnFechaMenu.style.display = "initial";
+          menu.style.display = "flex";
+          btnAbreMenu.style.display = "none";
+        });
+        btnFechaMenu.addEventListener("click", (e) => {
+          btnFechaMenu.style.display = "none";
+          menu.style.display = "none";
+          btnAbreMenu.style.display = "initial";
+        });
+        menuItens.forEach((item) => {
+          item.addEventListener("click", (e) => {
+            btnFechaMenu.style.display = "none";
+            menu.style.display = "none";
+            btnAbreMenu.style.display = "initial";
+          });
+        });
       }
     </script>
   </body>
