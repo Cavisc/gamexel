@@ -85,6 +85,11 @@
       feather.replace();
     </script>
     <script>
+      const btnAbreMenu = document.querySelector(".menu_abre");
+      const btnFechaMenu = document.querySelector(".menu_fecha");
+      const menu = document.querySelector(".menu");
+      const menuItens = document.querySelectorAll(".menu_item");
+
       const urlParams = new URLSearchParams(window.location.search);
       let categoria = urlParams.get("category");
       let id = parseInt(urlParams.get("id"));
