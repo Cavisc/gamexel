@@ -29,6 +29,8 @@
   </head>
   <body>
     <header>
+      <i data-feather="menu" class="menu_abre"></i>
+      <i data-feather="x" class="menu_fecha"></i>
       <img
         src="./assets/logo.png"
         alt="logo"
@@ -37,19 +39,18 @@
       />
       <div class="menu">
         <li class="menu_item">
-          <a href="./index.html#jogos" class="menu_item-link">jogos</a>
+          <a href="#jogos" class="menu_item-link">jogos</a>
         </li>
         <li class="menu_item">
-          <a href="./index.html#stores" class="menu_item-link">stores</a>
+          <a href="#stores" class="menu_item-link">stores</a>
         </li>
         <li class="menu_item">
-          <a href="./index.html#publishers" class="menu_item-link"
-            >publishers</a
-          >
+          <a href="#publishers" class="menu_item-link">publishers</a>
         </li>
       </div>
       <div class="campo_pesquisa">
-        <h2 class="nome-site">Gamexel</h2>
+        <input type="text" placeholder="Pesquisar games" class="pesquisa" />
+        <i id="btn_pesquisar" class="icon-search"></i>
       </div>
     </header>
     <main>
@@ -79,6 +80,7 @@
       </div>
     </main>
 
+    <script src="./script.js"></script>
     <script>
       const urlParams = new URLSearchParams(window.location.search);
       let categoria = urlParams.get("category");
