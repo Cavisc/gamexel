@@ -21,6 +21,15 @@
   color: var(--roxo);
 }
 
+.logotipo {
+  color: var(--preto);
+}
+
+.logotipo > span {
+  color: var(--rosa);
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 767px) {
   .menu {
     align-items: center;

@@ -40,18 +40,19 @@
       />
       <div class="menu">
         <li class="menu_item">
-          <a href="#jogos" class="menu_item-link">jogos</a>
+          <a href="./index.html?#jogos" class="menu_item-link">jogos</a>
         </li>
         <li class="menu_item">
-          <a href="#stores" class="menu_item-link">stores</a>
+          <a href="./index.html?#stores" class="menu_item-link">stores</a>
         </li>
         <li class="menu_item">
-          <a href="#publishers" class="menu_item-link">publishers</a>
+          <a href="./index.html?#publishers" class="menu_item-link"
+            >publishers</a
+          >
         </li>
       </div>
       <div class="campo_pesquisa">
-        <input type="text" placeholder="Pesquisar games" class="pesquisa" />
-        <i id="btn_pesquisar" class="icon-search"></i>
+        <h1 class="logotipo">Game<span>xel</span></h1>
       </div>
     </header>
     <main>
@@ -88,7 +89,6 @@
       const btnAbreMenu = document.querySelector(".menu_abre");
       const btnFechaMenu = document.querySelector(".menu_fecha");
       const menu = document.querySelector(".menu");
-      const menuItens = document.querySelectorAll(".menu_item");
 
       const urlParams = new URLSearchParams(window.location.search);
       let categoria = urlParams.get("category");
@@ -200,13 +200,6 @@
           btnFechaMenu.style.display = "none";
           menu.style.display = "none";
           btnAbreMenu.style.display = "initial";
-        });
-        menuItens.forEach((item) => {
-          item.addEventListener("click", (e) => {
-            btnFechaMenu.style.display = "none";
-            menu.style.display = "none";
-            btnAbreMenu.style.display = "initial";
-          });
         });
       }
     </script>
