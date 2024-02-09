@@ -1,0 +1,14 @@
+.stores_header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 70%;
+}
+
+@media screen and (max-width: 1023px) {
+  .stores_header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

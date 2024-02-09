@@ -1,0 +1,33 @@
+.item-detalhado_descricao {
+  color: var(--preto);
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.15;
+  overflow-y: scroll;
+}
+
+.item-detalhado_descricao::-webkit-scrollbar {
+  width: 12px;
+}
+
+.item-detalhado_descricao::-webkit-scrollbar-track {
+  background: var(--rosa);
+}
+
+.item-detalhado_descricao::-webkit-scrollbar-thumb {
+  background-color: var(--preto);
+  border-radius: 0 0 20px 20px;
+}
+
+@media screen and (max-width: 1439px) {
+  .item-detalhado_descricao {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .item-detalhado_descricao {
+    font-size: 0.8rem;
+    overflow: visible;
+  }
+}

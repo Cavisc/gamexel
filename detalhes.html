@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gamexel</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assets/icomoon/style.css" />
+    <link rel="stylesheet" href="./menu/header.css" />
+    <link rel="stylesheet" href="./menu/logo.css" />
+    <link rel="stylesheet" href="./menu/menu.css" />
+    <link rel="stylesheet" href="./menu/menu-item.css" />
+    <link rel="stylesheet" href="./menu/pesquisa.css" />
+    <link rel="stylesheet" href="./detalhes/item-detalhado-container.css" />
+    <link rel="stylesheet" href="./detalhes/item-detalhado-imagem.css" />
+    <link rel="stylesheet" href="./detalhes/item-detalhado-info.css" />
+    <link rel="stylesheet" href="./detalhes/item-detalhado-nome.css" />
+    <link rel="stylesheet" href="./detalhes/item-detalhado-descricao.css" />
+    <link rel="stylesheet" href="./detalhes/item-detalhado-data.css" />
+    <link rel="stylesheet" href="./detalhes/item-detalhado-rating.css" />
+    <link rel="stylesheet" href="./detalhes/item-detalhado-link.css" />
+  </head>
+  <body>
+    <header>
+      <i data-feather="menu" class="menu_abre"></i>
+      <i data-feather="x" class="menu_fecha"></i>
+      <img
+        src="./assets/logo.png"
+        alt="logo"
+        class="logo"
+        onclick="window.location='index.html'"
+      />
+      <div class="menu">
+        <li class="menu_item">
+          <a href="./index.html?#jogos" class="menu_item-link">jogos</a>
+        </li>
+        <li class="menu_item">
+          <a href="./index.html?#stores" class="menu_item-link">stores</a>
+        </li>
+        <li class="menu_item">
+          <a href="./index.html?#publishers" class="menu_item-link"
+            >publishers</a
+          >
+        </li>
+      </div>
+      <div class="campo_pesquisa">
+        <h1 class="logotipo">Game<span>xel</span></h1>
+      </div>
+    </header>
+    <main>
+      <div class="item-detalhado_container">
+        <!--img
+          src="./assets/logo.png"
+          alt="imagem do item detalhado"
+          class="item-detalhado_imagem"
+        />
+        <div class="item-detalhado_info">
+          <h1 class="item-detalhado_nome">Título do item</h1>
+          <p class="item-detalhado_descricao">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perferendis provident at inventore mollitia ea reprehenderit facere
+            et culpa sunt? Quis doloribus neque quam, eius pariatur delectus
+            unde numquam quia deleniti.
+          </p>
+          <p class="item-detalhado_data">
+            Data de lançamento:
+            <span class="item-detalhado_data-span">12/12/2012</span>
+          </p>
+          <p class="item-detalhado_rating">
+            Avaliação: <span class="item-detalhado_rating-span">5.0</span>
+          </p>
+          <a href="#" class="item-detalhado_link">Link do item</a>
+        </div-->
+      </div>
+    </main>
+
+    <script>
+      feather.replace();
+    </script>
+    <script>
+      const btnAbreMenu = document.querySelector(".menu_abre");
+      const btnFechaMenu = document.querySelector(".menu_fecha");
+      const menu = document.querySelector(".menu");
+
+      const urlParams = new URLSearchParams(window.location.search);
+      let categoria = urlParams.get("category");
+      let id = parseInt(urlParams.get("id"));
+      if (categoria == "games") {
+        fetch(
+          "https://api.rawg.io/api/games/" +
+            id +
+            "?key=f86230ad675a41239c7e3d45ec7fd4c0"
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            const result = data;
+            let str = `<img
+          src="${result.background_image}"
+          alt="imagem do item detalhado"
+          class="item-detalhado_imagem"
+        />
+        <div class="item-detalhado_info">
+          <h1 class="item-detalhado_nome">${result.name}</h1>
+          <div class="item-detalhado_descricao">
+            ${result.description}
+          </div>
+          <p class="item-detalhado_data">
+            Data de lançamento:
+            <span class="item-detalhado_data-span">${result.released}</span>
+          </p>
+          <p class="item-detalhado_rating">
+            Avaliação: <span class="item-detalhado_rating-span">${result.rating}</span>
+          </p>
+          <a href="${result.website}" class="item-detalhado_link" target="_blank">Link: ${result.name}</a>
+          </div>`;
+
+            const containerItem = document.querySelector(
+              ".item-detalhado_container"
+            );
+            containerItem.innerHTML = str;
+          });
+      } else if (categoria == "stores") {
+        fetch(
+          "https://api.rawg.io/api/stores/" +
+            id +
+            "?key=f86230ad675a41239c7e3d45ec7fd4c0"
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            const result = data;
+            let str = `<img
+          src="${result.image_background}"
+          alt="imagem do item detalhado"
+          class="item-detalhado_imagem"
+        />
+        <div class="item-detalhado_info">
+          <h1 class="item-detalhado_nome">${result.name}</h1>
+          <div class="item-detalhado_descricao">
+            ${result.description}
+          </div>
+          <p class="item-detalhado_data">
+            Quantidade de jogos:
+            <span class="item-detalhado_data-span">${result.games_count}</span>
+          </p>
+          <a href="http://${result.domain}" class="item-detalhado_link" target="_blank">Link: ${result.name}</a>
+          </div>`;
+
+            const containerItem = document.querySelector(
+              ".item-detalhado_container"
+            );
+            containerItem.innerHTML = str;
+          });
+      } else if (categoria == "publishers") {
+        fetch(
+          "https://api.rawg.io/api/publishers/" +
+            id +
+            "?key=f86230ad675a41239c7e3d45ec7fd4c0"
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            const result = data;
+            let str = `<img
+          src="${result.image_background}"
+          alt="imagem do item detalhado"
+          class="item-detalhado_imagem"
+        />
+        <div class="item-detalhado_info">
+          <h1 class="item-detalhado_nome">${result.name}</h1>
+          <div class="item-detalhado_descricao">
+            ${result.description}
+          </div>
+          <p class="item-detalhado_data">
+            Quantidade de jogos:
+            <span class="item-detalhado_data-span">${result.games_count}</span>
+          </p>
+          </div>`;
+
+            const containerItem = document.querySelector(
+              ".item-detalhado_container"
+            );
+            containerItem.innerHTML = str;
+          });
+      }
+      // dinâmica de menu mobile
+      if (window.screen.width < 768) {
+        btnAbreMenu.addEventListener("click", (e) => {
+          btnFechaMenu.style.display = "initial";
+          menu.style.display = "flex";
+          btnAbreMenu.style.display = "none";
+        });
+        btnFechaMenu.addEventListener("click", (e) => {
+          btnFechaMenu.style.display = "none";
+          menu.style.display = "none";
+          btnAbreMenu.style.display = "initial";
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+.store {
+  animation: aparecer 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.store_titulo {
+  color: var(--rosa);
+}
+
+.store_imagem {
+  max-height: 185px;
+}
+
+.store_jogos-titulo {
+  color: var(--roxo);
+}
+
+.store_link {
+  color: var(--rosa);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.store_mensagem {
+  color: var(--azul);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.store_mensagem:hover,
+.store_link:hover {
+  color: var(--roxo);
+}
+
+@media screen and (max-width: 767px) {
+  .store_imagem {
+    max-width: 300px;
+  }
+}

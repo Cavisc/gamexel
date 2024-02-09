@@ -1,0 +1,12 @@
+.item-detalhado_imagem {
+  border-radius: 20px;
+  max-height: 80%;
+  max-width: 40%;
+}
+
+@media screen and (max-width: 767px) {
+  .item-detalhado_imagem {
+    height: auto;
+    max-width: 250px;
+  }
+}

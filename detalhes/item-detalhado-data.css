@@ -1,0 +1,15 @@
+.item-detalhado_data {
+  color: var(--preto);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.item-detalhado_data-span {
+  color: var(--bege);
+}
+
+@media screen and (max-width: 767px) {
+  .item-detalhado_data {
+    font-size: 1rem;
+  }
+}

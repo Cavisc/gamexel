@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gamexel</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assets/icomoon/style.css" />
+    <link rel="stylesheet" href="./menu/header.css" />
+    <link rel="stylesheet" href="./menu/logo.css" />
+    <link rel="stylesheet" href="./menu/menu.css" />
+    <link rel="stylesheet" href="./menu/menu-item.css" />
+    <link rel="stylesheet" href="./menu/pesquisa.css" />
+    <link rel="stylesheet" href="./jogos/jogos.css" />
+    <link rel="stylesheet" href="./jogos/jogos-header.css" />
+    <link rel="stylesheet" href="./jogos/jogos-filtros.css" />
+    <link rel="stylesheet" href="./jogos/jogos-main.css" />
+    <link rel="stylesheet" href="./jogos/jogo.css" />
+    <link rel="stylesheet" href="./stores/stores.css" />
+    <link rel="stylesheet" href="./stores/stores-header.css" />
+    <link rel="stylesheet" href="./stores/stores-container.css" />
+    <link rel="stylesheet" href="./stores/store.css" />
+    <link rel="stylesheet" href="./publishers/publishers.css" />
+    <link rel="stylesheet" href="./publishers/publishers-header.css" />
+    <link rel="stylesheet" href="./publishers/publishers-container.css" />
+    <link rel="stylesheet" href="./publishers/publisher.css" />
+    <link rel="stylesheet" href="./infos/infos.css" />
+    <link rel="stylesheet" href="./infos/sobre.css" />
+    <link rel="stylesheet" href="./infos/editorial.css" />
+    <link rel="stylesheet" href="./footer/footer.css" />
+  </head>
+  <body>
+    <header>
+      <i data-feather="menu" class="menu_abre"></i>
+      <i data-feather="x" class="menu_fecha"></i>
+      <img
+        src="./assets/logo.png"
+        alt="logo"
+        class="logo"
+        onclick="window.location='index.html'"
+      />
+      <div class="menu">
+        <li class="menu_item">
+          <a href="#jogos" class="menu_item-link">jogos</a>
+        </li>
+        <li class="menu_item">
+          <a href="#stores" class="menu_item-link">stores</a>
+        </li>
+        <li class="menu_item">
+          <a href="#publishers" class="menu_item-link">publishers</a>
+        </li>
+      </div>
+      <div class="campo_pesquisa">
+        <input type="text" placeholder="Pesquisar games" class="pesquisa" />
+        <i id="btn_pesquisar" class="icon-search"></i>
+      </div>
+    </header>
+    <main>
+      <section class="jogos" id="jogos">
+        <div class="jogos_header">
+          <h1 class="jogos_titulo">Jogos</h1>
+          <div class="jogos_filtros-genero">
+            <label for="genero">Gênero</label>
+            <select name="genero" id="genero" class="genero">
+              <option value="all">Todos</option>
+              <option value="adventure">Aventura</option>
+              <option value="action">Ação</option>
+              <option value="terror">Terror</option>
+              <option value="racing">Corrida</option>
+              <option value="strategy">Estratégia</option>
+            </select>
+          </div>
+        </div>
+        <div class="jogos_main"></div>
+      </section>
+
+      <section class="stores" id="stores">
+        <div class="stores_header">
+          <h1 class="stores_titulo">Stores</h1>
+        </div>
+        <div class="stores_container"></div>
+      </section>
+
+      <section class="publishers" id="publishers">
+        <div class="publishers_header">
+          <h1 class="publishers_titulo">Publishers</h1>
+        </div>
+        <div class="publishers_container"></div>
+      </section>
+      <section class="infos">
+        <div class="sobre">
+          <h1 class="sobre_titulo">Sobre</h1>
+          <p class="sobre_texto">
+            Gamexel é um portal de games com foco em jogos no estilo pixel art e
+            jogos em outros estilos também.<br />
+            Esse belo estilo quadrado (ou não) que hoje é pouco utilizado, trás
+            uma estética única e belos jogos.<br />
+            Aqui você fica ligado nas novidades do mundo dos pixel games e nos
+            lançamentos.<br />
+            Jogos de terror, de aventura ou de ação, não importa o gênero.<br />
+            Sendo em pixel art, você encontra aqui.
+          </p>
+        </div>
+        <div class="editorial">
+          <h1 class="editorial_titulo">Editorial</h1>
+          <div class="editorial_pessoas">
+            <div class="pessoa">
+              <i></i>
+              <p><strong>Redação: </strong>Carlos Coelho</p>
+            </div>
+            <div class="pessoa">
+              <i></i>
+              <p><strong>Pesquisa: </strong>Carlos Coelho</p>
+            </div>
+            <div class="pessoa">
+              <i></i>
+              <p><strong>Gerente Geral: </strong>Carlos Coelho</p>
+            </div>
+          </div>
+          <div class="editorial_redes">
+            <h3 class="redes_titulo">redes sociais:</h3>
+            <ul class="redes_icones">
+              <li class="redes_icone">
+                <a href="#" class="redes_icone-link"
+                  ><i class="icon-facebook2"></i
+                ></a>
+              </li>
+              <li class="redes_icone">
+                <a href="#" class="redes_icone-link"
+                  ><i class="icon-twitter"></i
+                ></a>
+              </li>
+              <li class="redes_icone">
+                <a href="#" class="redes_icone-link"
+                  ><i class="icon-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="copyright">
+        <p>
+          Copyright 2022 - Disciplina de Desenvolvimento de Interfaces Web -
+          Carlos Vinícius de Souza Coelho
+          <br />
+          Curso: Ciência da Computação
+        </p>
+      </div>
+      <div class="logo"></div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+.editorial_titulo {
+    margin-bottom: 2rem;
+}
+
+.editorial_pessoas {
+    color: var(--azul);
+}
+
+.redes_titulo {
+    color: var(--rosa);
+}
+
+.redes_icones {
+    display: flex;
+    font-size: 1.1rem;
+    gap: 1rem;
+}
+
+.redes_icone {
+    list-style: none;
+}
+
+.redes_icone-link {
+    color: var(--rosa);
+    text-decoration: none;
+}

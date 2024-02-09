@@ -1,0 +1,31 @@
+.jogos_main {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.jogo_vazio {
+  color: var(--rosa);
+  grid-column: 2/4;
+  text-align: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .jogos_main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .jogo_vazio {
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .jogos_main {
+    grid-template-columns: 1fr;
+  }
+
+  .jogo_vazio {
+    grid-column: 1/2;
+  }
+}

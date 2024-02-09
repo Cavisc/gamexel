@@ -1,0 +1,10 @@
+.item-detalhado_nome {
+  color: var(--bege);
+  font-family: var(--Popins);
+}
+
+@media screen and (max-width: 767px) {
+  .item-detalhado_nome {
+    font-size: 1.7rem;
+  }
+}

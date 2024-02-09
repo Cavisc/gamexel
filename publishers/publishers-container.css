@@ -1,0 +1,12 @@
+.publishers_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1023px) {
+  .publishers_container {
+    flex-direction: column;
+  }
+}
